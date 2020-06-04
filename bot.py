@@ -4,8 +4,8 @@ import os
 
 from telebot import types
 
-token = os.environ.get('BOT_TOKEN')
-bot.run(str(token))
+token = os.getenv("BOT_TOKEN")
+bot = telebot.TeleBot(token)
 
 
 
