@@ -1,10 +1,12 @@
 import telebot
 import random
-import config
+import os
 
 from telebot import types
 
-bot = telebot.TeleBot(config.TOKEN)
+token = os.environ.get('BOT_TOKEN')
+bot.run(str(token))
+
 
 
 @bot.message_handler(commands=['start'])
